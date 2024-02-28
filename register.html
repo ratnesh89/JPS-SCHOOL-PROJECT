@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page with Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(../images/9ls0_4iri_201221.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .register-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .register-container img {
+            width: 70%;
+            max-height: 1000px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+
+        button, .google-signin-btn {
+            background-color: #ea512e;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            width: 25%;
+
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+
+        button:hover, .google-signin-btn:hover {
+            background-color: #ff9307;
+
+        }
+
+        @media (max-width: 768px) {
+            .register-container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .register-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <img src="images/favicon.png" alt="Register Image">
+        <h2>Register</h2>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Register</button>
+
+        <!-- Google Sign-In button 
+        <div class="g-signin2 google-signin-btn" data-onsuccess="onGoogleSignIn"></div>
+    </div>
+-->
+
+    <!-- Include the Google Sign-In script 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+-->
+
+    <!-- Google Sign-In callback function 
+    <script>
+        function onGoogleSignIn(googleUser) {
+            // Handle Google Sign-In here
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do something with the user's ID
+            console.log('Name: ' + profile.getName()); // Do something with the user's name
+            console.log('Email: ' + profile.getEmail()); // Do something with the user's email
+        }
+    </script>
+-->
+</body>
+</html>
